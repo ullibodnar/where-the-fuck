@@ -1,19 +1,21 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 
-import { StyledTop, StyledBottom, StyledButton } from '../styled'
-import { RestaurantName } from '../'
+import { StyledTop, StyledBottom, StyledButton, StyledTitle } from '../styled'
+import { Restaurant } from '../'
+import { fuckThatButtonClicked, FUCK_THAT_BUTTON_CLICKED } from '../../state'
 
 class App extends Component {
   render () {
-    const { value, nextAction } = this.props
     return (
       <div className='App'>
         <StyledTop>
-          <p>Eat at fuckin</p>
-          <RestaurantName value={value} />
+          <StyledTitle>Eat at fuckin</StyledTitle>
+          <Restaurant name={this.props.name} website={this.props.website} />
+          {/* <p>Rating: {value.restaurant.rating}</p> */}
         </StyledTop>
         <StyledBottom>
-          <StyledButton onClick={nextAction}>
+          <StyledButton onClick={this.props.fuckThatButtonClicked}>
             Nah, fuck that
           </StyledButton>
         </StyledBottom>
@@ -22,4 +24,19 @@ class App extends Component {
   }
 }
 
-export default App
+const mapStateToProps = state => {
+  return {
+    name: state.selectedRestaurant.name,
+    website: state.selectedRestaurant.website
+  }
+}
+
+function mapDispatchToProps (dispatch) {
+  return {
+    fuckThatButtonClicked: () => {
+      dispatch({ type: FUCK_THAT_BUTTON_CLICKED })
+    }
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App)

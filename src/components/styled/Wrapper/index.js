@@ -1,22 +1,23 @@
 import styled from 'styled-components'
 
-const wrapper = styled.div`
-  height: 50vh;
+const Wrapper = styled.div`
   font-size: 4em;
   padding: 40px;
   text-align: center;
 `
-wrapper.displayName = 'StyledWrapper'
+Wrapper.displayName = 'StyledWrapper'
 
-const top = wrapper.extend`
+const Top = Wrapper.extend`
   background: black;
   color: white;
+  margin: 0;
+  height: 60vh;
 `
-top.displayName = 'StyledTop'
+Top.displayName = 'StyledTop'
 
-const bottom = wrapper.extend`
+const Bottom = Wrapper.extend`
   
 `
-bottom.displayName = 'StyledBottom'
+Bottom.displayName = 'StyledBottom'
 
-export { top, bottom }
+export { Top, Bottom }

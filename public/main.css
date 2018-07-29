@@ -1,7 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Kirang+Haerang');
 
+
+* {
+  box-sizing: border-box;
+
+  font-family: "Kirang Haerang", sans-serif;
+}
 body {
   padding: 0;
   margin: 0;
-  font-family: "Kirang Haerang", sans-serif;
 }
