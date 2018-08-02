@@ -5,6 +5,8 @@ import { StyledTop, StyledBottom, StyledButton, StyledTitle } from '../styled'
 import { Restaurant } from '../'
 import { fuckThatButtonClicked, FUCK_THAT_BUTTON_CLICKED } from '../../state'
 
+const deleteMe = ''
+
 class App extends Component {
   render () {
     return (
