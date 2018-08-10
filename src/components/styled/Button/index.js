@@ -7,8 +7,9 @@ const Button = styled.button`
   cursor: pointer;
   background: transparent;
   border: 2px solid black;
-  font-size: 1em;
   transition: all .2s ease;
+  font-size: 40px;
+
   &:focus {outline:0;}
   &:hover {
     background:black;

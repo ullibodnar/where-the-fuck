@@ -1,3 +1,3 @@
-export function getRestaurant ({ items }) {
+export function getSelectedRestaurant ({ items }) {
   return items.selectedRestaurant
 }

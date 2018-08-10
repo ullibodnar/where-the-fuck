@@ -80,6 +80,11 @@ export const defaultState = {
         address: '',
 
         rating: 1
+      },
+      Event: {
+        0: {
+          views: 1
+        }
       }
     }
   },

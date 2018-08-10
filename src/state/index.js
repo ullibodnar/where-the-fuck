@@ -11,7 +11,7 @@ import {
   itemsHasErrored,
   itemsIsLoading
 } from './actions'
-import { getRestaurant } from './selectors'
+import { getSelectedRestaurant } from './selectors'
 import configureStore from './store'
 
 export {
@@ -22,7 +22,7 @@ export {
   fuckThatButtonClicked,
   rootReducer,
   configureStore,
-  getRestaurant,
+  getSelectedRestaurant,
   itemsFetchDataSuccess,
   itemsHasErrored,
   itemsIsLoading

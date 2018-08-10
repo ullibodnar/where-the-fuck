@@ -5,7 +5,7 @@ import { Restaurant } from '../../containers'
 export default function Top () {
   return (
     <StyledTop>
-      <StyledTitle>Eat at fuckin</StyledTitle>
+      <StyledTitle>Eat at fuckin'</StyledTitle>
       <Restaurant />
     </StyledTop>
   )
