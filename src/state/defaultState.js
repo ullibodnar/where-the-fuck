@@ -66,18 +66,22 @@ export const defaultState = {
       rating: 1
     }
   ],
-  selectedRestaurant: {
-    id: 5,
+  items: {
+    selectedRestaurant: {
+      Venue: {
+        id: 5,
 
-    name: 'Dillingers',
+        title: 'Dillingers',
 
-    isCafe: false,
+        isCafe: false,
 
-    website: 'https://www.dillingers.org/',
+        website: 'https://www.dillingers.org/',
 
-    address: '',
+        address: '',
 
-    rating: 1
+        rating: 1
+      }
+    }
   },
   viewed: []
 }
