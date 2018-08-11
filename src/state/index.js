@@ -4,14 +4,18 @@ import {
   ITEMS_HAS_ERRORED,
   ITEMS_IS_LOADING
 } from './constants.js'
+
 import rootReducer from './reducers'
+
 import {
   fuckThatButtonClicked,
   itemsFetchDataSuccess,
   itemsHasErrored,
   itemsIsLoading
 } from './actions'
-import { getSelectedRestaurant } from './selectors'
+
+import { getSelectedRestaurant, getItemsIsLoading } from './selectors'
+
 import configureStore from './store'
 
 export {
@@ -25,5 +29,6 @@ export {
   getSelectedRestaurant,
   itemsFetchDataSuccess,
   itemsHasErrored,
-  itemsIsLoading
+  itemsIsLoading,
+  getItemsIsLoading
 }

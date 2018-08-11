@@ -59,7 +59,7 @@ export const defaultState = {
 
       isCafe: false,
 
-      website: 'https://www.dillingers.org/',
+      website: 'https://www.dillingers.co.nz/',
 
       address: '',
 
@@ -75,7 +75,7 @@ export const defaultState = {
 
         isCafe: false,
 
-        website: 'https://www.dillingers.org/',
+        website: 'https://www.dillingers.co.nz/',
 
         address: '',
 
