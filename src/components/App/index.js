@@ -1,25 +1,47 @@
-import React, { Component } from 'react'
+import React from 'react'
+import { connect } from 'react-redux'
 
-import { StyledTop, StyledBottom, StyledButton } from '../styled'
-import { RestaurantName } from '../'
+import { Bottom, Top } from '..'
 
-class App extends Component {
-  render () {
-    const { value, nextAction } = this.props
-    return (
-      <div className='App'>
-        <StyledTop>
-          <p>Eat at fuckin</p>
-          <RestaurantName value={value} />
-        </StyledTop>
-        <StyledBottom>
-          <StyledButton onClick={nextAction}>
-            Nah, fuck that
-          </StyledButton>
-        </StyledBottom>
-      </div>
-    )
+import {
+  itemsFetchDataSuccess,
+  itemsHasErrored,
+  itemsIsLoading
+} from '../../state'
+
+const apiUrl =
+  'https://visawoap.com/api/venues/limit:1000/.json?key=4e44f1ac85cd60e3caa56bfd4afb675e'
+
+function App ({ fetchData }) {
+  return (
+    <div className='App'>
+      <Top />
+      {fetchData()}
+      <Bottom />
+    </div>
+  )
+}
+
+function mapDispatchToProps (dispatch) {
+  return {
+    fetchData: () => {
+      console.log('111561563476523146758')
+      dispatch(itemsIsLoading(true))
+      fetch(apiUrl)
+        .then(response => {
+          if (!response.ok) {
+            throw Error(response.statusText)
+          }
+
+          dispatch(itemsIsLoading(false))
+
+          return response
+        })
+        .then(response => response.json())
+        .then(items => dispatch(itemsFetchDataSuccess(items.venues)))
+        .catch(() => dispatch(itemsHasErrored(true)))
+    }
   }
 }
 
-export default App
+export default connect(null, mapDispatchToProps)(App)

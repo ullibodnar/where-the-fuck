@@ -1,7 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Kirang+Haerang');
+@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah');
 
+
+* {
+  box-sizing: border-box;
+
+  font-family: "Gloria Hallelujah", sans-serif, arial;
+}
 body {
   padding: 0;
   margin: 0;
-  font-family: "Kirang Haerang", sans-serif;
 }

@@ -1,20 +1,21 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { createStore } from 'redux'
 import { App } from './components'
 import registerServiceWorker from './registerServiceWorker'
+import { Provider } from 'react-redux'
+import { defaultState } from './state/defaultState'
 
-import { nextAction } from './reducers'
+import { configureStore } from './state'
 
-const store = createStore(nextAction)
+const store = configureStore(defaultState)
+
 const rootEl = document.getElementById('root')
 
 const render = () =>
   ReactDOM.render(
-    <App
-      value={store.getState()}
-      nextAction={() => store.dispatch({ type: 'NEXT_ACTION' })}
-    />,
+    <Provider store={store}>
+      <App />
+    </Provider>,
     rootEl
   )
 registerServiceWorker()

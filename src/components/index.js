@@ -1,4 +1,6 @@
 import App from './App'
-import RestaurantName from './RestaurantName'
+import FuckThatButton from './FuckThatButton'
+import Bottom from './Bottom'
+import Top from './Top'
 
-export { App, RestaurantName }
+export { App, FuckThatButton, Bottom, Top }
