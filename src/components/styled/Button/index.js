@@ -15,6 +15,12 @@ const Button = styled.button`
     background:black;
     color: white;
   }
+
+  @media only screen and (max-width : 480px) {
+    font-size: 2.2em;
+    padding: 0.5rem 0.4rem;
+    margin: 0.5rem 0.4rem;
+  }
   
 `
 
