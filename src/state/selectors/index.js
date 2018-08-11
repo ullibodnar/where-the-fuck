@@ -2,6 +2,6 @@ export function getSelectedRestaurant ({ items }) {
   return items.selectedRestaurant
 }
 
-export function getItemsIsLoading ({ itemsIsLoading }) {
-  return itemsIsLoading
+export function getItems ({ items }) {
+  return items
 }

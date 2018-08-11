@@ -4,21 +4,23 @@ export const ITEMS_IS_LOADING = 'ITEMS_IS_LOADING'
 export const ITEMS_FETCH_DATA_SUCCESS = 'ITEMS_FETCH_DATA_SUCCESS'
 
 // Feature flags
-export let CAFE_FLAG = true
+export let CAFE_FLAG = false
 export let REGION_FLAG = true
 export let MAP_FLAG = false
 export let VIEWS_FLAG = false
 export let BURGER_DETAILS_FLAG = true
+export let PHOTO_FLAG = false
 
 export let USE_REAL_API_FLAG = false
 
-//setAll(false)
+// setAll(false)
 
-function setAll(value) {
-    CAFE_FLAG = value
-    REGION_FLAG = value
-    MAP_FLAG = value
-    VIEWS_FLAG = value
-    BURGER_DETAILS_FLAG = value
-    USE_REAL_API_FLAG = value
+function setAll (value) {
+  CAFE_FLAG = value
+  REGION_FLAG = value
+  MAP_FLAG = value
+  VIEWS_FLAG = value
+  BURGER_DETAILS_FLAG = value
+  USE_REAL_API_FLAG = value
+  PHOTO_FLAG = value
 }

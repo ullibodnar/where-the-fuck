@@ -14,7 +14,7 @@ import {
   itemsIsLoading
 } from './actions'
 
-import { getSelectedRestaurant, getItemsIsLoading } from './selectors'
+import { getSelectedRestaurant, getItems } from './selectors'
 
 import configureStore from './store'
 
@@ -30,5 +30,5 @@ export {
   itemsFetchDataSuccess,
   itemsHasErrored,
   itemsIsLoading,
-  getItemsIsLoading
+  getItems
 }

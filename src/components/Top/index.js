@@ -7,7 +7,7 @@ export default function Top () {
   return (
     <StyledTop>
       <CafeButton />
-      <StyledTitle>Eat at fuckin'</StyledTitle>
+      <StyledTitle>Why not try a fuckin'</StyledTitle>
       <Restaurant />
     </StyledTop>
   )

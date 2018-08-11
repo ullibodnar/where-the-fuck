@@ -4,8 +4,7 @@ export const StyledRestaurant = styled.a`
   color: white;
   text-decoration: none;
   margin: 0;
-  font-size: 120px;
-  line-height: 200px;
+  font-size: 30px;
 
   &:hover {
     cursor: pointer;
@@ -16,15 +15,6 @@ export const StyledRestaurant = styled.a`
     color: white;
   }
 
-  @media only screen and (max-width : 1500px) {
-    font-size: 90px;
-    line-height: 130px;
-  }
-
-  @media only screen and (max-width : 820px) {
-    font-size: 60px;
-    line-height: 80px;
-  }
 `
 StyledRestaurant.displayName = 'StyledRestaurant'
 

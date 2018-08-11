@@ -1,4 +1,5 @@
 import { combineReducers } from 'redux'
+import { isEmpty } from 'ramda'
 
 import { defaultState } from '../defaultState'
 
@@ -34,18 +35,35 @@ function items (state = defaultState, { type, payload }) {
     case ITEMS_FETCH_DATA_SUCCESS:
       return {
         ...state,
-        restaurants: payload
+        restaurants: payload,
+        selectedRestaurant: pickBurgerJoint(payload)
       }
     case FUCK_THAT_BUTTON_CLICKED:
       return {
         ...state,
-        selectedRestaurant: state.restaurants[
-          Math.floor(Math.random() * state.restaurants.length)
-        ]
+        selectedRestaurant: pickBurgerJoint(state.restaurants)
       }
 
     default:
       return state
+  }
+}
+
+function pickBurgerJoint (restaurants) {
+  const restaurant = restaurants[Math.floor(Math.random() * restaurants.length)]
+
+  const eventExists = restaurant.Event
+  const nameOfBurgerExists =
+    restaurant.Event[0] && restaurant.Event[0].name_of_burger
+
+  if (eventExists) {
+    if (nameOfBurgerExists) {
+      return restaurant
+    }
+    return pickBurgerJoint(restaurants)
+  } else {
+    console.log('New restaurant should be called')
+    return pickBurgerJoint(restaurants)
   }
 }
 
