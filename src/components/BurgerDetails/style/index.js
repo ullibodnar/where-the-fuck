@@ -6,7 +6,9 @@ export const StyledBurgerName = styled.h1`
   font-size: 4em;
   line-height: 1.2;
   margin-bottom: 0.6em;
-
+  overflowWrap: break-word;
+  hyphens: auto;
+    
   @media only screen and (max-width : 1500px) {
     font-size: 3.5em;
   }
