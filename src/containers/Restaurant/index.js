@@ -1,13 +1,17 @@
 import { connect } from 'react-redux'
 
-import { getSelectedRestaurant } from '../../state'
+import { getSelectedRestaurant, getItemsIsLoading } from '../../state'
 import Restaurant from '../../components/Restaurant'
 
 const mapStateToProps = state => {
   const { Venue, Event } = getSelectedRestaurant(state)
+
+  const itemsIsLoading = getItemsIsLoading(state)
+
   return {
     Venue,
-    Event
+    Event,
+    itemsIsLoading
   }
 }
 

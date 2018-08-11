@@ -9,8 +9,7 @@ import {
   itemsIsLoading
 } from '../../state'
 
-const apiUrl =
-  'https://visawoap.com/api/venues/limit:1000/.json?key=4e44f1ac85cd60e3caa56bfd4afb675e'
+const apiUrl = 'https://visawoap.com/api/venues/limit:1000/.json?key=4e44f1ac85cd60e3caa56bfd4afb675e'
 
 function App ({ fetchData }) {
   return (
