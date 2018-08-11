@@ -7,7 +7,6 @@ export default function Bottom () {
   return (
     <StyledBottom>
       <FuckThatButton />
-      <i className="fas fa-coffee"></i>
     </StyledBottom>
   )
 }
