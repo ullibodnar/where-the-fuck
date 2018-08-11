@@ -25,7 +25,6 @@ function App ({ fetchData }) {
 function mapDispatchToProps (dispatch) {
   return {
     fetchData: () => {
-      console.log('111561563476523146758')
       dispatch(itemsIsLoading(true))
       fetch(apiUrl)
         .then(response => {

@@ -52,7 +52,7 @@ const Restaurant = ({ Venue, Event }) => {
             '&key=AIzaSyD_1dPGiRnu7LDb7Lptg-K-ZghT6PF62ww'
         }
       /> */}
-      <img src={imgUrl} />
+      <img src={imgUrl} alt={'location map'} />
     </div>
   )
 }
