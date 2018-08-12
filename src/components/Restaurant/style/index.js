@@ -15,11 +15,17 @@ export const StyledRestaurant = styled.a`
     color: white;
   }
 
+  @media only screen and (max-width : 480px) {
+    margin: 0;
+    font-size: 1.5em;
+    line-height: 0.5;
+  }
+
 `
 StyledRestaurant.displayName = 'StyledRestaurant'
 
 export const StyledRestaurantDetails = styled.p`
-  margin: 20px;
-  font-size: 30px;
+  margin: 0;
+  font-size: 1.5em;
 `
 StyledRestaurantDetails.displayName = 'StyledRestaurantDetails'

@@ -33,7 +33,6 @@ function formatWebsiteCorrectly (website) {
 
 const Restaurant = ({ Venue, Event, items }) => {
   const website = formatWebsiteCorrectly(Venue.website)
-  console.log(items)
   if (!items) {
     return (
       <div>
@@ -54,7 +53,6 @@ const Restaurant = ({ Venue, Event, items }) => {
 
       {REGION_FLAG &&
         <StyledRestaurantDetails>
-
           ({Venue.region})
         </StyledRestaurantDetails>}
 
