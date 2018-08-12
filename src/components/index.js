@@ -3,6 +3,6 @@ import FuckThatButton from './FuckThatButton'
 import Bottom from './Bottom'
 import Top from './Top'
 import CafeButton from './CafeButton'
-import BurgerDetails from './BurgerDetails'
+import BurgerName from './BurgerName'
 
-export { App, BurgerDetails, FuckThatButton, CafeButton, Bottom, Top }
+export { App, BurgerName, FuckThatButton, CafeButton, Bottom, Top }

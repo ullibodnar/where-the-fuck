@@ -2,12 +2,11 @@ import styled from 'styled-components'
 
 const Button = styled.button`
   display: inline-block;
-  padding: 0.5em 1em;
   cursor: pointer;
   background: transparent;
   border: 2px solid black;
   transition: all .2s ease;
-  font-size: 40px;
+  font-size: 1.8em;
 
   &:focus {outline:0;}
   &:hover {
@@ -15,11 +14,16 @@ const Button = styled.button`
     color: white;
   }
 
-  @media only screen and (max-width : 480px) {
-    font-size: 2.2em;
-    padding: 0.5em 0.4em;
+  @media only screen and (min-height: 800px) {
+    padding: 0 0.4em;
+    font-size: 2.4em;
+    @media only screen and (min-height: 870px) {
+      @media only screen and (min-width: 1000px) {
+        padding: 0 0.4em;
+        font-size: 3em;
+      }
+    }
   }
-  
 `
 
 Button.displayName = 'StyledButton'

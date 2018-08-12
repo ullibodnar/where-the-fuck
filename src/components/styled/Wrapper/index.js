@@ -10,7 +10,20 @@ const Top = Wrapper.extend`
   background: black;
   color: white;
   margin: 0;
-  height: 80vh;
+  height: 75vh;
+  overflow: scroll;
+
+  @media only screen and (min-height: 500px) {
+    height: 80vh;
+  }
+
+  @media only screen and (min-height: 650px) {
+    height: 83vh;
+  }
+
+  @media only screen and (min-height: 800px) {
+    height: 83vh;
+  }
 `
 Top.displayName = 'StyledTop'
 

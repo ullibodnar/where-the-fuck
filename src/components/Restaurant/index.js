@@ -3,8 +3,14 @@ import { isEmpty } from 'ramda'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
 
-import { StyledRestaurant, StyledRestaurantDetails } from './style'
-import { BurgerDetails } from '../'
+import {
+  StyledRestaurant,
+  StyledRestaurantDetails,
+  StyledFloatingSection
+} from './style'
+
+import { BurgerName } from '../'
+
 import {
   REGION_FLAG,
   MAP_FLAG,
@@ -45,8 +51,12 @@ const Restaurant = ({ Venue, Event, items }) => {
 
   return (
     <div>
-      {BURGER_DETAILS_FLAG && <BurgerDetails Event={Event} />}
-      <div><FontAwesomeIcon icon={faMapMarkerAlt} size='3x' /></div>
+      {BURGER_DETAILS_FLAG && <BurgerName Event={Event} />}
+
+      <StyledFloatingSection>
+        <FontAwesomeIcon icon={faMapMarkerAlt} size='3x' />
+      </StyledFloatingSection>
+
       <StyledRestaurant href={website} target={'_blank'}>
         {Venue.title}
       </StyledRestaurant>
