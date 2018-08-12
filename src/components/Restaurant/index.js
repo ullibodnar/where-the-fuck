@@ -13,7 +13,6 @@ import { BurgerName } from '../'
 
 import {
   REGION_FLAG,
-  MAP_FLAG,
   VIEWS_FLAG,
   BURGER_DETAILS_FLAG
 } from '../../state/constants'

@@ -1,6 +1,4 @@
 import { combineReducers } from 'redux'
-import { contains } from 'ramda'
-
 import { defaultState } from '../defaultState'
 
 import {
