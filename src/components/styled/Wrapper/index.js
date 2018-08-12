@@ -11,6 +11,7 @@ const Top = Wrapper.extend`
   color: white;
   margin: 0;
   height: 80vh;
+  overflow: scroll;
 `
 Top.displayName = 'StyledTop'
 
