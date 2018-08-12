@@ -27,5 +27,6 @@ StyledRestaurant.displayName = 'StyledRestaurant'
 export const StyledRestaurantDetails = styled.p`
   margin: 0;
   font-size: 1.5em;
+  color: #cccccc;
 `
 StyledRestaurantDetails.displayName = 'StyledRestaurantDetails'
