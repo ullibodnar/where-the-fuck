@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux'
-import { isEmpty } from 'ramda'
+import { contains } from 'ramda'
 
 import { defaultState } from '../defaultState'
 
@@ -33,20 +33,38 @@ function itemsIsLoading (state = false, action) {
 function items (state = defaultState, { type, payload }) {
   switch (type) {
     case ITEMS_FETCH_DATA_SUCCESS:
+      const x = pickBurgerJoint(payload)
+      console.log('first: ', x.Venue.id)
       return {
         ...state,
         restaurants: payload,
-        selectedRestaurant: pickBurgerJoint(payload)
+        selectedRestaurant: x,
+        viewedRestaurants: [],
+        unviewedRestaurants: payload
       }
     case FUCK_THAT_BUTTON_CLICKED:
       return {
         ...state,
-        selectedRestaurant: pickBurgerJoint(state.restaurants)
+        viewedRestaurants: [
+          ...state.viewedRestaurants,
+          state.selectedRestaurant.Venue.id
+        ],
+        unviewedRestaurants: state.restaurants.filter(
+          restaurant =>
+            !state.viewedRestaurants.includes(restaurant.Venue.id.toString())
+        ),
+        selectedRestaurant: pickNextBurgerJoint(state)
       }
 
     default:
       return state
   }
+}
+
+function pickNextBurgerJoint (state) {
+  const restaurant = pickBurgerJoint(state.unviewedRestaurants)
+
+  return restaurant
 }
 
 function pickBurgerJoint (restaurants) {
@@ -62,7 +80,6 @@ function pickBurgerJoint (restaurants) {
     }
     return pickBurgerJoint(restaurants)
   } else {
-    console.log('New restaurant should be called')
     return pickBurgerJoint(restaurants)
   }
 }

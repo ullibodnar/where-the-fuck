@@ -33,7 +33,6 @@ function formatWebsiteCorrectly (website) {
 
 const Restaurant = ({ Venue, Event, items }) => {
   const website = formatWebsiteCorrectly(Venue.website)
-  console.log(items)
   if (!items) {
     return (
       <div>
