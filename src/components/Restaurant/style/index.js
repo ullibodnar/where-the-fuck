@@ -5,7 +5,20 @@ export const StyledRestaurant = styled.a`
   text-decoration: none;
   margin: 0;
   font-size: 1.5em;
-  line-height: 0.5;
+
+  @media only screen and (min-height: 480px){
+    font-size: 1.8em;
+  }
+  
+  @media only screen and (min-height: 600px) {
+    font-size: 2em;
+    margin: .5em 0;
+  }
+  @media only screen and (min-height: 850px) {
+    font-size: 3em;
+    margin: 1em 0;
+  }
+  
 `
 StyledRestaurant.displayName = 'StyledRestaurant'
 
@@ -30,6 +43,5 @@ const float = keyframes`
 
 export const StyledFloatingSection = styled.div`
   transform: translatey(0px);
-	animation: ${float} 2s ease-in-out infinite;
-}
+	animation: ${float} 2s ease infinite;
 `

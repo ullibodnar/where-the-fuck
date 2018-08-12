@@ -14,13 +14,12 @@ export let PHOTO_FLAG = false
 export let USE_REAL_API_FLAG = false
 
 // setAll(false)
-
-function setAll (value) {
-  CAFE_FLAG = value
-  REGION_FLAG = value
-  MAP_FLAG = value
-  VIEWS_FLAG = value
-  BURGER_DETAILS_FLAG = value
-  USE_REAL_API_FLAG = value
-  PHOTO_FLAG = value
-}
+// function setAll (value) {
+//   CAFE_FLAG = value
+//   REGION_FLAG = value
+//   MAP_FLAG = value
+//   VIEWS_FLAG = value
+//   BURGER_DETAILS_FLAG = value
+//   USE_REAL_API_FLAG = value
+//   PHOTO_FLAG = value
+// }
