@@ -10,7 +10,7 @@ const Top = Wrapper.extend`
   background: black;
   color: white;
   margin: 0;
-  height: 70vh;
+  height: 80vh;
 `
 Top.displayName = 'StyledTop'
 
