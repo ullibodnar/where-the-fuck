@@ -1,10 +1,13 @@
 import { Top, Bottom } from './Wrapper'
-import Button from './Button'
+import { WhiteButton, RestaurantTitleButton } from './Button'
 import Title from './Title'
+import { RestaurantDetails as StyledRestaurantDetails } from './Text'
 
 export {
   Top as StyledTop,
   Bottom as StyledBottom,
-  Button as StyledButton,
-  Title as StyledTitle
+  WhiteButton as StyledWhiteButton,
+  RestaurantTitleButton as StyledRestaurantTitleButton,
+  Title as StyledTitle,
+  StyledRestaurantDetails
 }
