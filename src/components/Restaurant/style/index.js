@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
 
 export const StyledRestaurant = styled.a`
   color: white;
@@ -20,6 +20,5 @@ export const StyledRestaurant = styled.a`
     font-size: 3em;
     margin: 1em 0;
   }
-  
 `
 StyledRestaurant.displayName = 'StyledRestaurant'
