@@ -6,9 +6,6 @@ const Title = styled.p`
   margin-bottom: 0.5em;
   line-height: 1;
   color: #cccccc;
-
-  @media only screen and (max-width : 480px) {
-  }
 `
 Title.displayName = 'StyledTitle'
 

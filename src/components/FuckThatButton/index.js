@@ -1,10 +1,10 @@
 import React from 'react'
-import { StyledButton } from '../styled'
+import { StyledWhiteButton } from '../styled'
 
 export default function FuckThatButton ({ fuckThatButtonClicked }) {
   return (
-    <StyledButton onClick={fuckThatButtonClicked}>
+    <StyledWhiteButton onClick={fuckThatButtonClicked}>
       Nah, fuck that
-    </StyledButton>
+    </StyledWhiteButton>
   )
 }
