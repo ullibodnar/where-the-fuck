@@ -1,5 +1,6 @@
 import React from 'react'
 import { StyledBurgerName } from './style'
+import { contains, split } from 'ramda'
 
 const BurgerName = ({ Event }) => {
   const burgerTitle = Event[0].name_of_burger
@@ -15,7 +16,7 @@ function checkForBurgerInTitle (title) {
   const burgerWords = ['Burger', 'Bayger', 'Baoger', 'burger']
 
   for (let i = 0; i < burgerWords.length; i++) {
-    if (title.includes(burgerWords[i])) {
+    if (contains(burgerWords[i], split(' ', title))) {
       return true
     }
   }

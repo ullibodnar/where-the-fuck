@@ -1,5 +1,6 @@
 import React from 'react'
 import { isEmpty } from 'ramda'
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 
 import {
   BurgerName,
